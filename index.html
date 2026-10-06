@@ -1,0 +1,598 @@
+<title>TıkanmıyoruzZZ Gizlilik Politikası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+
+<style>
+  :root {
+    --ground:      #FBFAFE;
+    --surface:     #FFFFFF;
+    --surface-alt: #F4F1FB;
+    --ink:         #1E1830;
+    --ink-soft:    #453B5E;
+    --muted:       #645A7A;
+    --rule:        #E4DEF1;
+    --accent:      #6B4EEB;
+    --stays:       #06805F;
+    --stays-bg:    #E7F7F1;
+    --leaves:      #9A6414;
+    --leaves-bg:   #FBF1DF;
+    --shadow:      0 1px 2px rgba(30, 24, 48, .05), 0 12px 28px -18px rgba(30, 24, 48, .30);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #120B1F;
+      --surface:     #1B1330;
+      --surface-alt: #241A38;
+      --ink:         #F2EEFB;
+      --ink-soft:    #D6CDE9;
+      --muted:       #A395C0;
+      --rule:        #2E2447;
+      --accent:      #A78DFF;
+      --stays:       #45DDAB;
+      --stays-bg:    #102C25;
+      --leaves:      #EFC176;
+      --leaves-bg:   #2C2314;
+      --shadow:      0 1px 2px rgba(0, 0, 0, .40), 0 14px 32px -20px rgba(0, 0, 0, .75);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #120B1F;
+    --surface:     #1B1330;
+    --surface-alt: #241A38;
+    --ink:         #F2EEFB;
+    --ink-soft:    #D6CDE9;
+    --muted:       #A395C0;
+    --rule:        #2E2447;
+    --accent:      #A78DFF;
+    --stays:       #45DDAB;
+    --stays-bg:    #102C25;
+    --leaves:      #EFC176;
+    --leaves-bg:   #2C2314;
+    --shadow:      0 1px 2px rgba(0, 0, 0, .40), 0 14px 32px -20px rgba(0, 0, 0, .75);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink-soft);
+    font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0 20px 88px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 41rem; margin: 0 auto; }
+
+  /* ── Başlık ─────────────────────────────────────────────── */
+
+  header { padding: 64px 0 40px; border-bottom: 1px solid var(--rule); }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+    font-size: .72rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -.015em;
+    color: var(--ink);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  /* Marka yazımı: son Z gövdeden bir tık büyük. */
+  .son-z { font-size: 1.09em; }
+
+  .lede {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    margin: 20px 0 0;
+    max-width: 34rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .76rem;
+    color: var(--muted);
+  }
+
+  .meta span { color: var(--ink); }
+
+  /* ── Özet paneli ────────────────────────────────────────── */
+
+  .split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 16px;
+    margin: 44px 0 8px;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 22px 22px 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .panel h2 {
+    font-family: "Public Sans", sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+  .panel--stays h2 { color: var(--stays); }
+  .panel--stays .dot { background: var(--stays); }
+  .panel--leaves h2 { color: var(--leaves); }
+  .panel--leaves .dot { background: var(--leaves); }
+
+  .panel ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+
+  .panel li {
+    font-size: .95rem;
+    padding-left: 17px;
+    position: relative;
+    color: var(--ink-soft);
+  }
+
+  .panel li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .62em;
+    width: 7px;
+    height: 1.5px;
+    background: var(--rule);
+  }
+
+  .panel--stays { background: var(--stays-bg); border-color: transparent; }
+  .panel--leaves { background: var(--leaves-bg); border-color: transparent; }
+
+  /* ── Bölümler ───────────────────────────────────────────── */
+
+  section { margin: 46px 0 0; }
+
+  section > h2 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.52rem;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 14px;
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    text-wrap: balance;
+  }
+
+  .num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .78rem;
+    color: var(--accent);
+    flex: none;
+    padding-top: .12em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  section p { margin: 0 0 14px; }
+  section p:last-child { margin-bottom: 0; }
+
+  section ul { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 8px; }
+  section li { padding-left: 2px; }
+
+  strong { color: var(--ink); font-weight: 700; }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ── Sağlayıcı tablosu ──────────────────────────────────── */
+
+  .table-scroll { overflow-x: auto; margin: 0 0 14px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem;
+    min-width: 26rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 11px 14px 11px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  th {
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    border-bottom-color: var(--ink);
+  }
+
+  td:first-child { color: var(--ink); font-weight: 500; white-space: nowrap; }
+
+  /* ── Doldurulacak alan ──────────────────────────────────── */
+
+  .fill {
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .84em;
+    background: var(--leaves-bg);
+    color: var(--leaves);
+    border: 1px dashed var(--leaves);
+    border-radius: 5px;
+    padding: 1px 8px;
+  }
+
+  /* ── Alt bilgi ──────────────────────────────────────────── */
+
+  footer {
+    margin: 60px 0 0;
+    padding: 26px 0 0;
+    border-top: 1px solid var(--rule);
+    font-size: .88rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; padding: 0 18px 64px; }
+    header { padding: 44px 0 32px; }
+    section > h2 { gap: 10px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Gizlilik Politikası</p>
+    <h1>TıkanmıyoruzZ<span class="son-z">Z</span></h1>
+    <p class="lede">
+      Bu uygulama hesap açmanızı istemez, kimliğinizi sormaz ve mesaj geçmişinizi
+      sunucularımıza yüklemez. Aşağıda hangi verinin nereye gittiğini olabildiğince
+      açık anlattık.
+    </p>
+    <ul class="meta">
+      <li>Yürürlük tarihi <span>7 Ekim 2026</span></li>
+      <li>Geliştirici <span>Solvex</span></li>
+      <li>Paket <span>com.solvex.tikanmiyoruz</span></li>
+    </ul>
+  </header>
+
+  <div class="split">
+    <div class="panel panel--stays">
+      <h2><span class="dot"></span>Telefonunuzdan çıkmaz</h2>
+      <ul>
+        <li>Üretilen mesaj geçmişiniz</li>
+        <li>Kredi bakiyeniz ve reklam sayacınız</li>
+        <li>Mesajlaştığınız kişilerin gerçek adları</li>
+        <li>Rehberinizden seçtiğiniz isimler</li>
+        <li>Yazışma hafızasının cihazda tutulan hâli</li>
+      </ul>
+    </div>
+    <div class="panel panel--leaves">
+      <h2><span class="dot"></span>Yapay zekâya gönderilir</h2>
+      <ul>
+        <li>Yazdığınız durum açıklaması</li>
+        <li>Mesaj metni — isimler ve numaralar gizlenmiş hâlde</li>
+        <li>Seçtiğiniz ilişki tipi ve amaç</li>
+        <li>Kişinin rolü ve yakınlığı — adı değil</li>
+        <li>Yazışma özetiniz — isimler gizlenmiş hâlde</li>
+        <li>Seçtiğiniz öneri dili ve üslup tercihi</li>
+      </ul>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>Kimlik bilgisi toplamıyoruz</h2>
+    <p>
+      Bu uygulamayı kullanmak için kayıt olmanız gerekmez. Adınızı, e-posta adresinizi,
+      telefon numaranızı veya konumunuzu <strong>istemiyoruz ve saklamıyoruz</strong>.
+      Uygulamanın kendine ait bir kullanıcı hesabı sistemi yoktur.
+    </p>
+    <p>
+      Rehberinize erişim <strong>isteğe bağlıdır</strong> ve yalnızca siz uygulama
+      içinden başlatırsanız istenir; ayrıntısı 06. bölümde.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Yazdığınız metinler nereye gidiyor</h2>
+    <p>
+      Öneri üretebilmek için, girdiğiniz durum açıklaması ile (varsa) yapıştırdığınız
+      karşı taraf mesajı, seçtiğiniz ilişki tipi ve amaç bilgisiyle birlikte
+      <strong>üçüncü taraf yapay zekâ servislerine</strong> gönderilir. Bu gönderim
+      şifreli bağlantı (HTTPS) üzerinden yapılır.
+    </p>
+    <p>
+      Uygulama, hız ve kesintisizlik için birden fazla servisi paralel dener; isteğiniz
+      aşağıdakilerden birine veya birkaçına ulaşabilir:
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Servis</th><th>Sağlayıcı</th><th>Gizlilik politikası</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gemini</td><td>Google LLC</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Groq</td><td>Groq, Inc.</td>
+            <td><a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">groq.com/privacy-policy</a></td>
+          </tr>
+          <tr>
+            <td>OpenRouter</td><td>OpenRouter, Inc.</td>
+            <td><a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">openrouter.ai/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Mistral</td><td>Mistral AI SAS</td>
+            <td><a href="https://mistral.ai/terms/#privacy-policy" target="_blank" rel="noopener">mistral.ai/terms</a></td>
+          </tr>
+          <tr>
+            <td>Cohere</td><td>Cohere Inc.</td>
+            <td><a href="https://cohere.com/privacy" target="_blank" rel="noopener">cohere.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Bu servisler kendi gizlilik politikalarına tabidir. Gönderdiğiniz metin bize ait bir
+      sunucuda saklanmaz — çünkü <strong>bize ait bir sunucu yoktur</strong>.
+    </p>
+    <p>
+      Bu nedenle: parola, kart numarası, T.C. kimlik numarası gibi hassas bilgileri
+      uygulamaya yazmayın.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Kimlik bilgileri gizlenerek gönderilir</h2>
+    <p>
+      Metin yapay zekâya gönderilmeden önce cihazınızda işlenir ve tanımlayıcı
+      bilgiler <strong>kodlarla değiştirilir</strong>. Yanıt geldiğinde kodlar
+      gerçek değerleriyle yeniden doldurulur. Bu işlemin tamamı telefonunuzda olur.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Metinde geçen</th><th>Yapay zekâya giden</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kişi adı ve soyadı</td><td>AD1, AD2…</td></tr>
+          <tr><td>Yer, kurum, tanınmayan özel ad</td><td>OZEL1, OZEL2…</td></tr>
+          <tr><td>Telefon numarası</td><td>TEL1</td></tr>
+          <tr><td>E-posta adresi</td><td>EPOSTA1</td></tr>
+          <tr><td>IBAN</td><td>IBAN1</td></tr>
+          <tr><td>T.C. kimlik numarası</td><td>TCNO1</td></tr>
+          <tr><td>Kart numarası</td><td>KART1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Otomatik yanıt özelliğinde ayrıca <strong>size mesaj gönderen kişinin adı
+      yapay zekâya hiç iletilmez</strong>; yalnızca sizin belirlediğiniz rol
+      (“Kardeş”, “Patron” gibi) ve yakınlık düzeyi gönderilir.
+    </p>
+    <p>
+      <strong>Bu koruma sınırsız değildir.</strong> Mesajın içeriği tek başına
+      sizi veya karşı tarafı tanıtabilir — örneğin “yarın ofiste buluşalım”
+      cümlesi isim içermese de bilgi taşır. Hassas konuşmalarda otomatik yanıt
+      özelliğini kapatmanızı öneririz.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Otomatik yanıt ve bildirim erişimi</h2>
+    <p>
+      Otomatik yanıt özelliği <strong>varsayılan olarak kapalıdır</strong>. Açmak
+      isterseniz önce ne olacağını anlatan bir bilgilendirme ekranını onaylamanız,
+      ardından Android ayarlarından uygulamaya <strong>bildirim erişimi</strong>
+      vermeniz gerekir. Bu izni vermediğiniz sürece hiçbir bildirim okunmaz.
+    </p>
+    <p>Özellik açıkken:</p>
+    <ul>
+      <li>
+        Yalnızca <strong>sizin seçtiğiniz</strong> uygulamaların bildirimleri okunur
+        (WhatsApp, Telegram gibi). Seçmediğiniz uygulamalara bakılmaz.
+      </li>
+      <li>
+        Okunan mesaj, yukarıdaki kodlama uygulandıktan sonra yanıt önerisi
+        üretmek için yapay zekâya gönderilir.
+      </li>
+      <li>
+        Bir kişi size ilk kez yazdığında, o kişinin sizin için kim olduğu
+        (rolü ve yakınlığı) bir kez sorulur. Bu bilgi cihazınızda kalır.
+      </li>
+      <li>
+        Öneri size bildirim olarak gösterilir. <strong>Siz “Gönder” demeden
+        karşı tarafa hiçbir mesaj iletilmez.</strong>
+      </li>
+    </ul>
+    <p>
+      Özelliği istediğiniz an uygulama içinden kapatabilir, bildirim erişimini
+      Android ayarlarından geri alabilirsiniz.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Yazışma hafızası</h2>
+    <p>
+      Öneriler kişiye uygun olsun diye uygulama, otomatik yanıt açıkken
+      yazıştığınız mesajları <strong>cihazınızda biriktirir</strong>. Amaç,
+      aranızdaki üslubu ve süregelen konuları tanıyıp size uyan bir yanıt
+      önerebilmektir.
+    </p>
+    <ul>
+      <li>
+        Biriken metin <strong>kodlanmış hâlidir</strong>: isimler ve numaralar
+        03. bölümdeki gibi zaten değiştirilmiştir.
+      </li>
+      <li>
+        Hafıza belirli bir uzunluğu aştığında yapay zekâ tarafından kısa bir
+        <strong>özete</strong> indirgenir; ham metin silinir. Bu özetleme sizin
+        kredinizden düşmez.
+      </li>
+      <li>
+        Yeni öneri istendiğinde bu özet ve son birkaç satır, yine kodlanmış
+        hâlde yapay zekâya gönderilir.
+      </li>
+      <li>
+        Hafıza <strong>yalnızca cihazınızda</strong> tutulur; bize veya başka
+        bir yere yüklenmez.
+      </li>
+    </ul>
+    <p>
+      Bir kişinin hafızasını <strong>Kişiler</strong> ekranından tek tek
+      (“Hafızayı unut”), tamamını ise <strong>Ayarlar → Verilerimi sıfırla</strong>
+      ile silebilirsiniz.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Rehber erişimi (isteğe bağlı)</h2>
+    <p>
+      Kişilerinizi önceden etiketleyebilmeniz için uygulama, <strong>siz
+      istediğinizde</strong> rehberinize erişim izni ister. İzni vermek zorunda
+      değilsiniz: vermezseniz de her şey çalışır, kişiler size mesaj geldikçe
+      tek tek sorulur.
+    </p>
+    <ul>
+      <li>Rehberden <strong>yalnızca isimler</strong> okunur. Telefon numarası,
+        e-posta adresi, fotoğraf ve not alanları okunmaz.</li>
+      <li>Okunan isimler <strong>telefonunuzdan çıkmaz</strong>, yapay zekâya
+        gönderilmez, bize iletilmez.</li>
+      <li>İzni Android ayarlarından istediğiniz an geri alabilirsiniz.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Cihazınızda saklananlar</h2>
+    <p>
+      Ürettiğiniz öneriler, kredi bakiyeniz, günlük reklam ve öneri sayaçlarınız,
+      seçtiğiniz uygulamalar, tanımladığınız kişiler (ad, rol, yakınlık) ve
+      yazışma hafızanız yalnızca telefonunuzun kendi depolama alanında tutulur.
+      Bu veriler internete yüklenmez, bizimle veya başka biriyle paylaşılmaz.
+    </p>
+    <p>
+      Uygulamayı sildiğinizde bu veriler telefonunuzdan da silinir.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Reklamlar</h2>
+    <p>
+      Ücretsiz kredi kazanmak için izleyebileceğiniz ödüllü reklamlar
+      <strong>Google AdMob</strong> tarafından sunulur. AdMob, ilgi alanına dayalı
+      reklam gösterebilmek için cihazınızın reklam kimliği (Advertising ID) gibi
+      bilgilere erişebilir. Bu veriler bize iletilmez.
+    </p>
+    <p>
+      Reklam kişiselleştirmesini Android ayarlarınızdan kapatabilir veya reklam
+      kimliğinizi sıfırlayabilirsiniz. Ayrıntı için
+      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google reklam politikaları</a>
+      sayfasına bakabilirsiniz.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>Satın almalar</h2>
+    <p>
+      Kredi paketi ve abonelik satın alımları <strong>Google Play</strong> üzerinden
+      yapılır. Ödeme bilgileriniz doğrudan Google tarafından işlenir; kart numaranız
+      veya fatura bilgileriniz uygulamaya hiçbir zaman iletilmez ve tarafımızca
+      görülmez.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span>Çocuklar</h2>
+    <p>
+      TıkanmıyoruzZZ 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan
+      bilerek veri toplamaz.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">11</span>Verilerinizi silme</h2>
+    <p>
+      Uygulama içinde <strong>Ayarlar</strong> ekranından:
+    </p>
+    <ul>
+      <li><strong>Geçmişi temizle</strong> — kayıtlı önerilerinizi siler.</li>
+      <li>
+        <strong>Verilerimi sıfırla</strong> — geçmişi, tanımladığınız kişileri,
+        yazışma hafızasının tamamını ve kredi bakiyenizi sıfırlar.
+      </li>
+    </ul>
+    <p>
+      Ayrıca <strong>Kişiler</strong> ekranından tek bir kişiyi silebilir veya
+      yalnızca onunla biriken hafızayı unutturabilirsiniz. İşlemler geri alınamaz.
+    </p>
+    <p>
+      Bizde saklanan bir kaydınız olmadığı için ayrıca bir silme talebi göndermenize
+      gerek yoktur.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">12</span>Değişiklikler</h2>
+    <p>
+      Bu politika, uygulamaya yeni bir özellik eklendiğinde güncellenebilir. Güncel sürüm
+      her zaman bu adreste yayınlanır ve yukarıdaki yürürlük tarihi değiştirilir.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">13</span>İletişim</h2>
+    <p>
+      Gizlilikle ilgili soru veya talepleriniz için bize yazabilirsiniz:
+      <a href="mailto:t15283401@gmail.com">t15283401@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    TıkanmıyoruzZZ · Solvex · Bu politika Türkçe olarak hazırlanmıştır ve
+    uygulamanın Google Play üzerinde yayınlanan sürümü için geçerlidir.
+  </footer>
+
+</div>
